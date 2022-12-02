@@ -33,6 +33,15 @@ void Vehicule::depanner() {
 
 void Vehicule::accelerer(int increment) {
   this->vitesse_ += 1;
+  
+  try
+  {
+    this->vitesse_ = (this->vitesseMax+1;
+  }
+  catch (std::invalid_argument const& ex)
+  {
+    std::cout << "error: " << ex.what() << '\n';
+  }
 }
 
 void Vehicule::monter(int nbOcc) {
@@ -54,5 +63,11 @@ string Vehicule::getEtat() {
   
 }
 
-//Il reste à faire le string::getEtat
 
+class Voiture : public Vehicule { 
+  //public:void bidon() { } 
+  };
+
+class Bateau : public Vehicule { 
+  //public:void bidon() { } 
+  };
