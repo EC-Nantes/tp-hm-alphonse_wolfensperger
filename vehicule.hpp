@@ -24,7 +24,7 @@ protected:
 public:
     enum EtatVehicule {ARRET, MARCHE, PANNE_LEGERE, PANNE_SEVERE};
     
-    Vehicule(int vitesseMax=0, int nbPlaces=1, int occupants=0);
+    Vehicule(int vitesseMax, int nbPlaces, int occupants);
     
     virtual void demarrer();
     
@@ -40,9 +40,9 @@ public:
 
     virtual void mettreEnPanne(double random);
     
-    virtual string getEtat() const;
+    virtual string getEtat();
     
-    virtual ~Vehicule();
+    //virtual ~Vehicule();
     friend ostream& operator<<(ostream& s,Vehicule const& v);
 
 };
